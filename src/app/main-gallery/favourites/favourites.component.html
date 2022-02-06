@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row" *ngIf="favouritesList.length == 0">
+    <button type="button" class="btn btn-secondary btn-lg btn-block">No Favourites Added!</button>
+  </div>
+  <div class="row" *ngIf="favouritesList.length > 0">
+    <div class="col-md-3 mx-auto my-5" *ngFor="let image of favouritesList; index as i">
+      <div class="card">
+        <div class="card-body mx-auto my-5">
+          <img class="image-style" src="{{ image }}" />
+
+          <br />
+          <button
+            class="mx-auto justify-content-center" class="btn btn-danger"
+            (click)="deleteImage(image)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

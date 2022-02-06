@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card image-style mx-auto my-5">
+    <img src="{{ initImage }}" />
+
+    <button (click)="addToFavourites()" class="btn btn-warning">Favourite</button>
+    <button (click)="getNewImage()" class="btn btn-primary">New</button>
+  </div>
+  <div *ngIf='isDuplicate'>
+    <button type="button" class="btn btn-secondary btn-block">Image already added to favourites!</button>
+  </div>
+</div>
